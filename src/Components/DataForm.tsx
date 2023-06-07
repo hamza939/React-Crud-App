@@ -30,10 +30,11 @@ function DataForm() {
   };
 
   return (
-    <div>
+    <div className='main-wrapper'>
+             <div className='main-container'>
       <h2>{id ? 'Update Data' : 'Create Data'}</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='input-container'>
           <label htmlFor="title">Title:</label>
           <input
             type="text"
@@ -43,7 +44,7 @@ function DataForm() {
             required
           />
         </div>
-        <div>
+        <div className='input-container'>
           <label htmlFor="description">Description:</label>
           <textarea
             id="description"
@@ -54,6 +55,7 @@ function DataForm() {
         </div>
         <button type="submit">{id ? 'Update' : 'Create'}</button>
       </form>
+      </div>
     </div>
   );
 }

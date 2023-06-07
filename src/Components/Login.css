@@ -7,7 +7,7 @@ html, body, #root, .App{
     justify-content: center;
     height: calc(100% - 58px);
 }
-.login-container {
+.main-container {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
@@ -17,7 +17,7 @@ html, body, #root, .App{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .login-container h2 {
+  .main-container h2 {
     text-align: center;
   }
   
@@ -38,6 +38,14 @@ html, body, #root, .App{
     border-radius: 5px;
     box-sizing: border-box;
   }
+  .input-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
   
   button {
     width: 100%;

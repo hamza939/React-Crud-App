@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation   } from 'react-router-dom';
 import Login from './Components/Login.tsx';
 import Signup from './Components/Signup.tsx';
+import DataDetails from './Components/DataDetails.tsx';
+import DataForm from './Components/DataForm.tsx';
+import DataList from './Components/DataList.tsx';
+
 
 const App = () => {
   return (
@@ -11,6 +15,9 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/DataDetails" element={<DataDetails />} />
+        <Route path="/DataForm" element={<DataForm />} />
+        <Route path="/DataList" element={<DataList />} />
       </Routes>
     </div>
   </Router>
@@ -33,6 +40,15 @@ return (
           </li>
           <li className={`nav-item ${location.pathname === '/signup' ? 'active' : ''}`}>
             <Link to="/signup" className="nav-link">Signup</Link>
+          </li>
+          <li className={`nav-item ${location.pathname === '/DataDetails' ? 'active' : ''}`}>
+            <Link to="/DataDetails" className="nav-link">DataDetails</Link>
+          </li>
+          <li className={`nav-item ${location.pathname === '/DataForm' ? 'active' : ''}`}>
+            <Link to="/DataForm" className="nav-link">DataForm</Link>
+          </li>
+          <li className={`nav-item ${location.pathname === '/DataList' ? 'active' : ''}`}>
+            <Link to="/DataList" className="nav-link">DataList</Link>
           </li>
         </ul>
       </nav>

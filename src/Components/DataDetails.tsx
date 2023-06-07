@@ -14,10 +14,12 @@ function DataDetails() {
   };
 
   return (
-    <div>
+    <div className='main-wrapper'>
+        <div className='main-container'>
       <h2>Data Details</h2>
       <p>Displaying details for ID: {id}</p>
       <button onClick={handleDelete}>Delete Data</button>
+      </div>
     </div>
   );
 }

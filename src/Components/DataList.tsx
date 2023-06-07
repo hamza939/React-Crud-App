@@ -10,7 +10,8 @@ function DataList() {
   ];
 
   return (
-    <div>
+    <div className='main-wrapper'>
+          <div className='main-container'>
       <h2>Data List</h2>
       <ul>
         {data.map((item) => (
@@ -20,6 +21,7 @@ function DataList() {
         ))}
       </ul>
       <Link to="/dataform">Create New Data</Link>
+      </div>
     </div>
   );
 }
