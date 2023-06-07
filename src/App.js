@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes, useLocation   } from 'react-router-dom';
+import Login from './Components/Login.tsx';
+import Signup from './Components/Signup.tsx';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className='h-100'>
+      <Header />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
     </div>
+  </Router>
+);
+};
+
+const Header = () => {
+const location = useLocation();
+
+return (
+  <header className="header">
+      <div className="logo">
+        {/* <img src="dummy-logo.png" alt="Logo" /> */}
+        <h4 className='m-0'>My Logo</h4> {/* If you want to use text instead of an image */}
+      </div>
+      <nav className="navbar">
+        <ul className="nav-list">
+          <li className={`nav-item ${location.pathname === '/login' ? 'active' : ''}`}>
+            <Link to="/login" className="nav-link">Login</Link>
+          </li>
+          <li className={`nav-item ${location.pathname === '/signup' ? 'active' : ''}`}>
+            <Link to="/signup" className="nav-link">Signup</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-}
+};
 
 export default App;
